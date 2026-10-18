@@ -1,7 +1,10 @@
 # L00205876_CloudFormation
 DevOps Pipeline CloudFormation Lab 1
 
-Review CloudFormation Lab
-- Watch Ruth's video for guidance
+Reviewed CloudFormation Lab
+- Watched Ruth's video for guidance
 - Confirm understanding with ChatGPT
-- Invite Ruth as a collaborator
+- Invited Ruth as a collaborator
+
+Branch 1
+- Added Code of Conduct and Merged back to Main
