@@ -28,4 +28,13 @@ Branch 2 - Website_L00205786_Sandy-Gallagher
 - Initially it did not work and I created a Troubleshoot build template. I thought a may have cut some code off when copying from the pdf
 - My initial stack was actually fine - I just needed to wait for the EC2 instance to pass it's checks
 - Note for future trouble shooting: if running from the stack outputs tab fails - check the status of the EC2 Instance
+
+  Branch 3 - Modify Linux Version to Linux 2023
+- I received an email alert advising Linux 2 support had been discontinued
+- Modified the original code to use Linux 2023 as documented on p. 237 of tutorial doc
+- Named the stack "Website-L00205876-Sandy-Gallagher"
+- Added my ip address from https://www.whatismyip.com/
+- Added the tag "website"
+- Waited for stack to complete and tested websit
+- Test was a success
   
