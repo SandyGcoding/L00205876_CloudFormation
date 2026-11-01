@@ -111,7 +111,24 @@ Branch 2 - Website_L00205786_Sandy-Gallagher
 - I added named the Stack ThreeTierArchitecture and added the Tag Dynamo DB with the Key Pair Basic Config
 - The stack completed successfully
 - In the console, I checked in DynamoDB that the table was there
-  
+
+
+    Branch 6 - created change set in stack for EC2 Instance and security code
+- I sketched a basic webpage and used a w3schools tutorial to add a search box
+- https://www.w3schools.com/tags/tag_search.asp
+- Using the w3schools sandbox. I amended the html code for my website
+- I added a hidden response line which will populate when the user enters their request and data is returned
+- Using the Linux2023 template, I updated my 3_Tier_Architecture.yml file
+- I created a change set in my Stack
+- Per best practice, I validated the .yml file
+- As expected it showed the DynamoDB Table and EC2 Instance and Security Group
+- The EC2 Instance and Security Group and are connected to each other but the Dynamo DBTable is not connected
+- I added my Public IP address to the Paramaeters
+- I added a tag for EC2
+- I reviewe the changes and then updated the stack
+- I tested the URL of my website
+- As expected, I can enter a Category but no data is returned
+
 
   
   
