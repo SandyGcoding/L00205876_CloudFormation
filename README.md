@@ -129,6 +129,13 @@ Branch 2 - Website_L00205786_Sandy-Gallagher
 - I tested the URL of my website
 - As expected, I can enter a Category but no data is returned
 
+  Brach 7 Lambda Test
+- I could not find an AWS Tutorial with the Python code for the Lambda inline
+- I eventually found a GitHub Example and modified it for my DataBase
+- As the DynamoDB Table existed I had to temporarily change the code and add the long name of the table
+- The test was a success in that it returned "Please re-enter" because there are no categories or sighting counts in my table
+- I will then update my main Stack file and test again before adding my API Gateway
+
 
   
   
