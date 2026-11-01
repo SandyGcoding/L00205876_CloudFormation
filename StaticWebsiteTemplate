@@ -65,10 +65,10 @@ Resources:
         - Name: !Sub
             - www.${Domain}
             - Domain: !Ref RootDomainName
-          Type: CNAME
-          TTL: 900
-          ResourceRecords:
-            - !GetAtt WWWBucket.DomainName
+          Type: A #Needs to be A to point to S3 website end point - not CNAME per tutorial  #Removed TTL 900 per tutorial because the Route53 record does not specify a TTL
+          AliasTarget:
+            HostedZoneId: !FindInMap [ RegionMap, !Ref 'AWS::Region', S3hostedzoneID]
+            DNSName: !FindInMap [ RegionMap, !Ref 'AWS::Region', websiteendpoint]
 Outputs:
   WebsiteURL: 
     Value: !GetAtt RootBucket.WebsiteURL
