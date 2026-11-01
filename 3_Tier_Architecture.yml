@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: DynamoDB Table
+Resources: 
+  NatureWatchTable: 
+    Type: AWS::DynamoDB::Table 
+    Properties: 
+      AttributeDefinitions: 
+        - AttributeName: "Category" 
+          AttributeType: "S" 
+      KeySchema: 
+        - AttributeName: "Category" 
+          KeyType: "HASH" 
+      BillingMode: PAY_PER_REQUEST #low traffic - no autoscaling or provisioned capacity required

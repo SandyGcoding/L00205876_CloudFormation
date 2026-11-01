@@ -94,6 +94,23 @@ Branch 2 - Website_L00205786_Sandy-Gallagher
 - I tested the domain and the url again and they were still working
 - When I tested wwww.butterno1.com it was blocked by my administrator but when I tested on my phone I could see the index.html content
 - I asked another person to do the same. It was blocked as they were on their work laptop but they could see the index.html content on their phone
+
+   Branch 5 - created stack for DynamoDB
+- I thought out the logic as an end user and checked with ChatGPT
+- Suggestion to ChatGPT - I will have a nature website where a user types in a category of animal and it returns the number spotted
+- Chat GPT confirmed it would be meet the requirements but I would need a lambda
+- I realised I had done something simular years ago but forgot my flow
+- I decided to start with the database
+- I just have one attribute "Category"
+- The tutorial had the billing mode as Provisioned
+- I asked Vhat GPT what this meant. It is for when capacity has been provisioned in advance
+- My website will not be busy so I do not need to provison capacity
+- I wrote a YAML script in NOtepad++ for the database only
+- The script was for a DynamoDB table called NatureWatchTable and it has one attribute: Category
+- I imported the script into templates under the CloudFormation Stack
+- I added named the Stack ThreeTierArchitecture and added the Tag Dynamo DB with the Key Pair Basic Config
+- The stack completed successfully
+- In the console, I checked in DynamoDB that the table was there
   
 
   
