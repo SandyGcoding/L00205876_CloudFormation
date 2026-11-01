@@ -94,14 +94,6 @@ Branch 2 - Website_L00205786_Sandy-Gallagher
 - I tested the domain and the url again and they were still working
 - When I tested wwww.butterno1.com it was blocked by my administrator but when I tested on my phone I could see the index.html content
 - I asked another person to do the same. It was blocked as they were on their work laptop but they could see the index.html content on their phone
-
-    Branch 5 - Amended index.html
-- Reviewed assignment requirements per document versus requirements per video instruction
-- Lecture name was required in the video
-- Added Ruth Lennon to header
-- Deleted Index.html in S3 bucket
-- Added updated version of index.html to s3 bucket
-- No code changes required for Stack Template
   
 
   
