@@ -37,4 +37,16 @@ Branch 2 - Website_L00205786_Sandy-Gallagher
 - Added the tag "website"
 - Waited for stack to complete and tested websit
 - Test was a success
+
+  Branch 4 - Change to S3 Static Website
+- Realised I needed to Host my Website using an S3 Bucket
+- Refreshed my memory using a manual build: https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html
+- Returned to best practices document
+- The best practices document used a Route53 hosted site
+- I purchased a domain from amazom (butterno1.com)
+- Page 567 of the document shows how to set up a bucket and set a policy using YAML. It also adds a no deletion policy which I do not want. (Creating an Amazon S3 bucket for website hosting and with a DeletionPolicy)
+- Page 553 shows the YAML code for setting up a static website but did not include a bucket policy so I needed to add the policy from the previous document to my template
+- My console has defaulted EU-North-1 so I needed to add my region and I had to Google the hosted zone id
+- I elected to remove all other regions so I could test with just my region
+  
   
