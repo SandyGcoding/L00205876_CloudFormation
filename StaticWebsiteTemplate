@@ -7,7 +7,7 @@ Parameters:
 Mappings:
   RegionMap:
     eu-north-1:
-      S3hostedzoneID: Z3OWWK6JFDEDGC
+      S3hostedzoneID: Z3BAZG2TWCNX0D #https://docs.aws.amazon.com/general/latest/gr/s3.html
       websiteendpoint: s3-website.eu-north-1.amazonaws.com #stockholm uses a "." not a "-" between website and eu
 Resources: 
   RootBucket: 
