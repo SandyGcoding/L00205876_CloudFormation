@@ -45,8 +45,19 @@ Branch 2 - Website_L00205786_Sandy-Gallagher
 - The best practices document used a Route53 hosted site
 - I purchased a domain from amazom (butterno1.com)
 - Page 567 of the document shows how to set up a bucket and set a policy using YAML. It also adds a no deletion policy which I do not want. (Creating an Amazon S3 bucket for website hosting and with a DeletionPolicy)
-- Page 553 shows the YAML code for setting up a static website but did not include a bucket policy so I needed to add the policy from the previous document to my template
+- Page 553 shows the YAML code for setting up a static website but did not include a bucket policy so I needed to add the policy from the previous document to my template (I changed S3Bucket to RootBucket in the code)
 - My console has defaulted EU-North-1 so I needed to add my region and I had to Google the hosted zone id
 - I elected to remove all other regions so I could test with just my region
+- I also saved the code to Notepad++ as the template screen to small to see the indentation alignments
+- I named my S3HostedStaticWebsite, added the tag Project with a value S3StaticWebsite and added my domain buttersno1.com
+
+   Branch 4a
+- My stack did not work - I received a DNS error - the alias target name does not live within the code
+- I asked Chat GPT what I had done wrong as I had edited the zone exactly
+- ChatGPT advised that for my region EU-North-1 the website endpoint format was website"."eu NOT website"-"eu
+- I deleted the original stack
+- I imported the template this time from Notepad++
+- I named my S3HostedStaticWebsite, added the tag Project with a value S3StaticWebsite and added my domain buttersno1.com
+
   
   
