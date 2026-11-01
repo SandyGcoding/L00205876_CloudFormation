@@ -41,23 +41,40 @@ Branch 2 - Website_L00205786_Sandy-Gallagher
   Branch 4 - Change to S3 Static Website
 - Realised I needed to Host my Website using an S3 Bucket
 - Refreshed my memory using a manual build: https://docs.aws.amazon.com/AmazonS3/latest/userguide/HostingWebsiteOnS3Setup.html
+- I created a file called index.html and a file called error.html
 - Returned to best practices document
 - The best practices document used a Route53 hosted site
 - I purchased a domain from amazom (butterno1.com)
 - Page 567 of the document shows how to set up a bucket and set a policy using YAML. It also adds a no deletion policy which I do not want. (Creating an Amazon S3 bucket for website hosting and with a DeletionPolicy)
 - Page 553 shows the YAML code for setting up a static website but did not include a bucket policy so I needed to add the policy from the previous document to my template (I changed S3Bucket to RootBucket in the code)
+- I changed the error file to error.html rather than 404.html as I had created and saved a file called error.html in my manual practice
 - My console has defaulted EU-North-1 so I needed to add my region and I had to Google the hosted zone id
 - I elected to remove all other regions so I could test with just my region
 - I also saved the code to Notepad++ as the template screen to small to see the indentation alignments
 - I named my S3HostedStaticWebsite, added the tag Project with a value S3StaticWebsite and added my domain buttersno1.com
 
-   Branch 4a
+   Branch 4a - change website endpoint - Correction 1
 - My stack did not work - I received a DNS error - the alias target name does not live within the code
 - I asked Chat GPT what I had done wrong as I had edited the zone exactly
 - ChatGPT advised that for my region EU-North-1 the website endpoint format was website"."eu NOT website"-"eu
 - I deleted the original stack
 - I imported the template this time from Notepad++
 - I named my S3HostedStaticWebsite, added the tag Project with a value S3StaticWebsite and added my domain buttersno1.com
+
+     Branch 4b - changed hosted zone - Correction 2
+- My stack did not work - I received another DNS error
+- I asked Chat GPT what I had done wrong now as I was meticulous in the change
+- ChatGPT advised that for my hostedzoneid was incorrect
+- I located a source document from aws with all websiteendpoint formats and hostedzone ids
+- Source: https://docs.aws.amazon.com/general/latest/gr/s3.html
+- I named my S3HostedStaticWebsite, added the tag Project with a value S3StaticWebsite and added my domain buttersno1.com
+- The stack worked correctly: it created two s3 Buckets and a website url
+- I clicked on the website URL and received a 404 error -> This was a success as it had created a static website but I did not have any content at this point
+- I then added my index.html and error.html files to my root bucket
+- When I refreshed the browser I could read the index.html content
+- I tested buttersno.1.com and I saw the contents of index.html again
+- However when I tested www.buttersno1.com - I received an AccessDenied error
+  
 
   
   
