@@ -53,7 +53,7 @@ Branch 2 - Website_L00205786_Sandy-Gallagher
 - I also saved the code to Notepad++ as the template screen to small to see the indentation alignments
 - I named my S3HostedStaticWebsite, added the tag Project with a value S3StaticWebsite and added my domain buttersno1.com
 
-   Branch 4a - change website endpoint - Correction 1
+    Branch 4a - change website endpoint - Correction 1
 - My stack did not work - I received a DNS error - the alias target name does not live within the code
 - I asked Chat GPT what I had done wrong as I had edited the zone exactly
 - ChatGPT advised that for my region EU-North-1 the website endpoint format was website"."eu NOT website"-"eu
@@ -74,6 +74,26 @@ Branch 2 - Website_L00205786_Sandy-Gallagher
 - When I refreshed the browser I could read the index.html content
 - I tested buttersno.1.com and I saw the contents of index.html again
 - However when I tested www.buttersno1.com - I received an AccessDenied error
+
+     Branch 4c - changed myDNS settings for WWWBucket  - Correction 3
+- I asked Chat GPT what could possibly be wrong with my setup as I had followed the tutorial and validated the code each time
+- Chat GPT told me to look at my Route53 settings
+- Everything was correct under record names - including www.buttersno1.com
+- The type was CNAME and the TTL was 900 as configured in my code
+- Still lost - I told Chat GPT I couldn't see anything obvious as type and TTL for my two buckets matched in Route 53 and in my code
+- Chat GPT then said the DNS setting should point to the s3 website endpoint
+- I know Ruth had said that tutorials could have errors but I needed to see and understand before making a change
+- In the AWS document for manual configuration both the Record Sets, for the Root and the Sub, should point to the S3 website which is Type A, and no TTL setting is needed
+- Source: https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html#root-domain-walkthrough-add-record-to-hostedzone 
+   Step 11: Add an alias for your root domain and subdomain
+- I changed the code in my YAML file to match the type and alias target of the sub domain to the root domain
+- I removed the TTL and the Resource Reocrds lines per the tutorial
+- As my Stack was working, I used a change set to make a change to the template code
+- I uploaded the YAML and checked the change
+- I proceeded with the update and waited for the changes to complete
+- I tested the domain and the url again and they were still working
+- When I tested wwww.butterno1.com it was blocked by my administrator but when I tested on my phone I could see the index.html content
+- I asked another person to do the same. It was blocked as they were on their work laptop but they could see the index.html content on their phone
   
 
   
